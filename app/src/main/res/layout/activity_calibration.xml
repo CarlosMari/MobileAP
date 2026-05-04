@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FTM Linear Calibration"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tvCalStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Set AP position, scan for AP, then collect at each point."
+            android:layout_marginBottom="12dp" />
+
+        <!-- AP position -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/etCalApX"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="AP X (m)"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="0"
+                android:layout_marginEnd="4dp" />
+
+            <EditText
+                android:id="@+id/etCalApY"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="AP Y (m)"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="0"
+                android:layout_marginEnd="4dp" />
+
+            <Button
+                android:id="@+id/btnCalSetAp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Set AP" />
+        </LinearLayout>
+
+        <!-- AP scan + selection -->
+        <Spinner
+            android:id="@+id/spinnerCalAP"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp" />
+
+        <Button
+            android:id="@+id/btnCalScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan for AP"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Point 1 -->
+        <TextView
+            android:id="@+id/tvPoint1Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnCollect1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collect" />
+
+            <TextView
+                android:id="@+id/tvPoint1Progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:text="0 / 60"
+                android:fontFamily="monospace" />
+        </LinearLayout>
+
+        <!-- Point 2 -->
+        <TextView
+            android:id="@+id/tvPoint2Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnCollect2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collect" />
+
+            <TextView
+                android:id="@+id/tvPoint2Progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:text="0 / 60"
+                android:fontFamily="monospace" />
+        </LinearLayout>
+
+        <!-- Point 3 -->
+        <TextView
+            android:id="@+id/tvPoint3Label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginBottom="2dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnCollect3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Collect" />
+
+            <TextView
+                android:id="@+id/tvPoint3Progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="12dp"
+                android:text="0 / 60"
+                android:fontFamily="monospace" />
+        </LinearLayout>
+
+        <!-- Manual entry -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="── Manual entry ──────────────────"
+            android:textSize="12sp"
+            android:textColor="#888888"
+            android:layout_marginBottom="6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="6dp">
+
+            <EditText
+                android:id="@+id/etManualSlope"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Slope"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="0.9479"
+                android:layout_marginEnd="4dp" />
+
+            <EditText
+                android:id="@+id/etManualIntercept"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Intercept"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="2.2416" />
+
+            <Button
+                android:id="@+id/btnManualApply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apply"
+                android:layout_marginStart="4dp"
+                android:backgroundTint="#4CAF50" />
+        </LinearLayout>
+
+        <!-- Results -->
+        <TextView
+            android:id="@+id/tvCalResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Calibration result will appear here after all 3 points are collected."
+            android:fontFamily="monospace"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnCalApply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apply and Save Calibration"
+            android:enabled="false" />
+
+        <Button
+            android:id="@+id/btnCalReset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Reset to Default (0.947 / 3.37)"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+</ScrollView>

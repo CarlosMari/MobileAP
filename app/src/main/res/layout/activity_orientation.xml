@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Header -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Relative Orientation"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="4dp" />
+
+    <TextView
+        android:id="@+id/tvOrientationStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capturing initial orientation…"
+        android:textSize="13sp"
+        android:textColor="#888888"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/btnResetOrientation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Reset Initial Orientation"
+        android:layout_marginBottom="16dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Game Rotation Vector -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F5F5F5"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TYPE_GAME_ROTATION_VECTOR"
+                    android:textSize="11sp"
+                    android:textColor="#888888"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvGameRv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Game Rotation Vector\n  Waiting for data…"
+                    android:textSize="15sp"
+                    android:fontFamily="monospace"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvGameNed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  NED: waiting…"
+                    android:textSize="15sp"
+                    android:fontFamily="monospace" />
+            </LinearLayout>
+
+            <!-- Geomagnetic Rotation Vector -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F5F5F5"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TYPE_GEOMAGNETIC_ROTATION_VECTOR"
+                    android:textSize="11sp"
+                    android:textColor="#888888"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvGeoRv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Geomagnetic Rotation Vector\n  Waiting for data…"
+                    android:textSize="15sp"
+                    android:fontFamily="monospace"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvGeoNed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  NED: waiting…"
+                    android:textSize="15sp"
+                    android:fontFamily="monospace" />
+            </LinearLayout>
+
+            <!-- Rotation Vector -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#F5F5F5"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TYPE_ROTATION_VECTOR"
+                    android:textSize="11sp"
+                    android:textColor="#888888"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvRotVec"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rotation Vector\n  Waiting for data…"
+                    android:textSize="15sp"
+                    android:fontFamily="monospace"
+                    android:layout_marginBottom="4dp" />
+
+                <TextView
+                    android:id="@+id/tvRotVecNed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  NED: waiting…"
+                    android:textSize="15sp"
+                    android:fontFamily="monospace" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

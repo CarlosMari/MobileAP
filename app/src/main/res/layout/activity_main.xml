@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wi-Fi FTM Ranging"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- SESSION LABELS -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="AP Position"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <Spinner
+                    android:id="@+id/spinnerAP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginEnd="8dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Test Point"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+                <Spinner
+                    android:id="@+id/spinnerTP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- AVG WINDOW + SAMPLE COUNT -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Avg window: "
+                android:textSize="12sp"
+                android:textStyle="bold" />
+            <Spinner
+                android:id="@+id/spinnerAvg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tvSessionCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  |  Samples: 0"
+                android:textSize="12sp"
+                android:layout_marginStart="12dp" />
+        </LinearLayout>
+
+        <!-- SCAN + AP SPINNER -->
+        <Button
+            android:id="@+id/btnScan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scan for FTM APs"
+            android:layout_marginBottom="6dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AP: "
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <Spinner
+                android:id="@+id/spinnerSelectedAP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- START / STOP -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="12dp">
+
+            <Button
+                android:id="@+id/btnStartRanging"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Start Ranging"
+                android:enabled="false"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btnStopRanging"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Stop Ranging"
+                android:enabled="false" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvResults"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Results will appear here"
+            android:textSize="16sp"
+            android:fontFamily="monospace" />
+
+        <Button
+            android:id="@+id/btnMotion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open IMU Tracker (standalone)"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnFusion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Open Fusion Tracker (IMU + FTM)"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnCalibration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FTM Calibration"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnOrientation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Orientation Tracker"
+            android:layout_marginTop="8dp" />
+
+        <Button
+            android:id="@+id/btnApLocator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AP Locator (FTM + IMU)"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+</ScrollView>
