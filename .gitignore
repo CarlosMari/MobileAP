@@ -17,3 +17,6 @@ local.properties
 # Large demo media — keep out of git
 *.mp4
 *.mov
+
+# IDE (all IntelliJ / Android Studio project files)
+.idea/
