@@ -1,7 +1,7 @@
 # MobileAP: locating Wi-Fi access points with a phone
 
 An Android app that estimates where an **unknown Wi-Fi access point** is, using a phone walking around
-a room. Group class project for Advanced Wireless Networks (2026).
+a room. Group class project for Advanced Wireless Networks.
 
 **How it works**
 
